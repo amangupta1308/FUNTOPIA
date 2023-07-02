@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header_files}}
+</head>
+
+<body>
+    {{>nav_aft}}
+    <br><br><br><br>
+    <div style="display: flex; justify-content: center; align-items: center">
+        <div class="card mb-3 service_card" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                <img src={{data.img_add}} class="img-fluid rounded-start" alt={{data.name}} style="height: 220px">
+                </div>
+                <div class="col-md-8" style="padding: 10px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{data.name}}</h5>
+                        <span><p class="card-text"><small class="text-muted">{{data.type}}</small></p></span>
+                        <span><p class="card-text">{{data.desc}}</p></span><br>
+                        <h6>₹ {{data.price}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+    <div style="display:flex; justify-content:center">
+        <div>
+            <form action="/add_cart/{{data.sid}}" method="POST" style="text-align: center">
+
+                {{!-- These 3 hidden input fields are used for getting the sid, service_nameand cost when make a POST request other method is to get the service details by doing find() by sid --}}
+                <input type="hidden" class="form-control" value={{data.sid}} placeholder="Enter the Quantity" name="sid">
+                <input type="hidden" class="form-control" value="{{data.name}}" placeholder="Enter the Quantity" name="sname">
+                <input type="hidden" class="form-control" value={{data.price}} placeholder="Enter the Quantity" name="cost">
+                <input type="hidden" class="form-control" value="{{data.img_add}}" placeholder="Enter the Quantity" name="imga">
+                <input type="number" class="form-control" placeholder="Enter the Quantity *" required name="quantity"><br>
+                <textarea class="form-control" placeholder="Enter the description" cols="50" rows="5" name="extra"></textarea><br>
+                <input type="submit" value="Add To Cart" style="border-radius: 10px; background-color: rgba(176, 200, 211, 0.87); padding: 12px; font-weight: 500; font-size: 17px; ">
+            </form>
+        </div>
+    </div>
+    <br><br><hr>
+    {{>footer}}
+    {{>script}}
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Kablammo&family=Roboto+Mono:ital@0;1&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* register */
+.background_registraton {
+    /* background-image: url("images/reg_img.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.background_index_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register_box {
+    width: 65vw;
+    height: 36vh;
+    border-width: 10vh;
+    padding: 5px;
+}
+
+
+/* services add icon */
+.button_menu {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    scale: 1.2;
+    padding: 5px;
+    border-radius: 47%;
+    background-color: whitesmoke;
+    width: 40px;
+    border: 3px solid rgb(194, 191, 191);
+    transition: all 0.3s ease-in-out;
+}
+
+.button_menu:hover {
+    background-color: lightblue;
+    color: whitesmoke;
+    border: 3px solid lightblue;
+}
+
+/* services cards */
+.service_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+.service_card {
+    margin: 50px;
+}
+
+.div_button_done {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+
+}
+
+.button_done {
+    background-color: whitesmoke;
+    padding: 2px 14px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 10px;
+    border-color: rgb(235, 194, 58);
+    color: aliceblue;
+    transition: all 0.3s ease-in-out;
+}
+
+.button_done:hover {
+    background-color: rgba(234, 208, 251, 0.737);
+}
+
+
+/* home page  */
+/* https://wallpapercave.com/wp/wp3764473.jpg */
+.mai_div{
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2016/02/21/amusement-park-ride.-wallpaper_.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.main_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainn_div{
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2016/02/21/amusement-park-ride.-wallpaper_.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    background-color: rgb(120 104 77 / 14%)!important;
+}
+.nav-link{
+    color: rgb(210,101,33)!important;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.navbar-brand{
+    color: rgb(210,101,33)!important;
+    font-size: 21px;
+    font-weight: 500;
+}
+.nav-link:hover{
+    color: rgb(210, 101, 33)!important;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in;
+    border-bottom-right-radius: 5%;
+    border-bottom-width: 50%;
+    border-bottom-left-radius: 5%;
+    border-bottom: 2px solid rgb(237, 228, 228);
+    font-weight: 700;
+}
+
+.categories{
+    display: flex;
+    flex-direction: row;
+}

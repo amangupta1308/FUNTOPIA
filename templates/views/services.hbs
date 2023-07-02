@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header_files}}
+</head>
+<body>
+    {{>nav_aft}}<br><br>
+    <div>
+        <div style="background-color: rgb(210,101,33); padding: 15px"><h1 style="text-align: center; color: whitesmoke">RIDES</h1></div>
+        <div class="service_cards">
+            {{#each data_r}}
+                <div class="card mb-3 service_card" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src={{this.img_add}} class="img-fluid rounded-start" alt={{this.name}} style="height: 250px">
+                        </div>
+                        <div class="col-md-8" style="padding: 10px">
+                            <div class="card-body">
+                                <h5 class="card-title">{{this.name}}</h5>
+                                <span><p class="card-text"><small class="text-muted">{{this.type}}</small></p></span>
+                                <span><p class="card-text">{{this.desc}}</p></span><br>
+                                <h6>₹ {{this.price}}</h6>
+                                <button class="button_menu"><a href="/add_cart/{{this.sid}}"><i class="fa-solid fa-plus"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+
+
+        <div style="background-color: rgb(210,101,33); padding: 15px"><h1 style="text-align: center; color: whitesmoke">SPORTS ARENA</h1></div>
+        <div class="service_cards">
+        {{#each data_s}}
+        <div class="card mb-3 service_card" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                <img src={{this.img_add}} class="img-fluid rounded-start" style="height: 220px">
+                </div>
+                <div class="col-md-8" style="padding: 10px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <span><p class="card-text"><small class="text-muted">{{this.type}}</small></p></span>
+                        <span><p class="card-text">{{this.desc}}</p></span><br>
+                        <h6>₹ {{this.price}}</h6>
+                        <button class="button_menu"><a href="/add_cart/{{this.sid}}"><i class="fa-solid fa-plus"></i></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        </div>  
+
+        <div style="background-color: rgb(210,101,33); padding: 15px"><h1 style="text-align: center; color: whitesmoke">EXCLUSIVE CUISINES</h1></div>
+        <div class="service_cards">
+        {{#each data_f}}
+        <div class="card mb-3 service_card" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                <img src={{this.img_add}} class="img-fluid rounded-start" alt={{this.name}} style="height: 250px">
+                </div>
+                <div class="col-md-8" style="padding: 10px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <span><p class="card-text"><small class="text-muted">{{this.type}}</small></p></span>
+                        <span><p class="card-text">{{this.desc}}</p></span><br>
+                        <h6>₹ {{this.price}}</h6>
+                        <button class="button_menu"><a href="/add_cart/{{this.sid}}"><i class="fa-solid fa-plus"></i></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+
+        <div style="background-color: rgb(210,101,33); padding: 15px"><h1 style="text-align: center; color: whitesmoke">ART GALLERY</h1></div>
+        <div class="service_cards">
+        {{#each data_a}}
+        <div class="card mb-3 service_card" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                <img src={{this.img_add}} class="img-fluid rounded-start" alt={{this.name}} style="height: 250px; width: 200px">
+                </div>
+                <div class="col-md-8" style="padding: 10px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <span><p class="card-text"><small class="text-muted">{{this.type}}</small></p></span>
+                        <span><p class="card-text">{{this.desc}}</p></span><br>
+                        <h6>₹ {{this.price}}</h6>
+                        <button class="button_menu"><a href="/add_cart/{{this.sid}}"><i class="fa-solid fa-plus"></i></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+    </div>
+    <div class="div_button_done">
+        <button class="button_done"><a style="color:rgb(84, 194, 204);text-decoration:none;padding: 3px 16px;" href="/final"><i class="fa-solid fa-cart-shopping"></i></a></button>
+    </div><br><br><hr>
+    {{>footer}}
+    {{>script}}
+
+</body>
+</html>

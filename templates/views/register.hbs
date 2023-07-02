@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header_files}}
+</head>
+
+<body>
+
+    <div class="background_registraton">
+        {{>nav_bef}}
+        
+        <div class="background_index_text" style="margin-top: 80px;">
+            <div style="display: flex; justify-content: center; align-items: center"><img src="images/register.png" width="500px"></div>
+            <form action="/register" method="POST">
+                <div class="container register_box">
+                    <div class="row ">
+                        <div class="col">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="First Name*" value=""
+                                    name="fname" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email *" value="" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Contact No *" value=""
+                                    name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Password *" value=""
+                                    name="password" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Last Name *" value="" name="lname" required>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="male">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="female">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                            </div>
+                            <br><br>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Age *" value="" name="age" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Confirm Password *" value=""
+                                    name="conf_password" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center">
+                        <input type="submit" style="background-color: rgb(54, 60, 103); color: rgb(100 109 190); padding: 10px; font-size:larger; border-radius:6px; font-weight: 600" value="REGISTER">
+                    </div>
+                    <br><br>
+            </form>
+             </div>
+       
+    </div>
+    <br><hr>
+    {{>footer}}
+    {{>script}}
+</body>
+
+</html>

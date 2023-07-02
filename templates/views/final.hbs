@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header_files}}
+</head>
+
+<body>
+    {{>nav_aft}}
+
+    {{#if data.cart.length}}
+    <div class="container mt-5">
+        <div class="row ">
+            <div class="col" style="position:relative">
+                <table class="table">
+                    <thead>
+                        <tr >
+                            <th scope="col" style="font-weight: 700;">RIDE</th>
+                            <th scope="col" style="font-weight: 700;">TICKETS</th>
+                            <th scope="col" style="font-weight: 700;">COST (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each data.cart}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td>{{this.quantity}}</td>
+                            <td>{{this.price}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                <div style="position: absolute;right:20%;"><span>Total price : ₹</span>{{data.t_price}} /-</div>
+                <br><br><br>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(210,101,33); padding: 15px; font-weight: 500; font-size: 20px">
+                    Place Order
+                </button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Thanks for Purchasing!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Your order is placed successfully...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary"><a href="/loginned" style="text-decoration: none; color: white">Home</a></button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {{else}}
+        <h3 style="text-align: center;margin-top: 25px;">OOPPS!!! Please Add Items From Menu</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png" class="rounded mx-auto d-block mb-3" width="30%">
+        <div class="div_button_done">
+            <button class="btn btn-primary button_done"><a style="color:rgb(230, 227, 227);text-decoration:none;padding: 3px 16px;" href="/services">Go To Services</a></button>
+        </div>
+    {{/if}}
+
+    <br><br><br><hr>
+    {{>footer}}
+    {{>script}}
+</body>
+
+</html>
